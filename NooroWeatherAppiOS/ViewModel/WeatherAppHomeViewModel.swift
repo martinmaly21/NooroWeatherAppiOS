@@ -64,16 +64,6 @@ final class WeatherAppHomeViewModel: ObservableObject {
     
     // MARK: - Public Methods
     func selectLocation(_ location: LocationWithWeather) {
-        Task {
-            do {
-                isLoading = true
-                error = nil
-                let updatedLocation = try await weatherService.getWeather(for: location.location.name)
-                selectedLocation = updatedLocation
-            } catch {
-                self.error = error
-            }
-            isLoading = false
-        }
+        selectedLocation = location
     }
 }
