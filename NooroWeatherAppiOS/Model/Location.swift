@@ -5,11 +5,11 @@
 //  Created by Martin Maly on 2024-12-30.
 //
 
-struct Location {
-    let icon: String
+import Foundation
+
+/// Represents a geographical location
+struct Location: Codable {
     let name: String
-    let temperature: Double
-    let humidity: Double
-    let uv: Double
-    let feelsLike: Double
+    let region: String
+    let country: String
 }
