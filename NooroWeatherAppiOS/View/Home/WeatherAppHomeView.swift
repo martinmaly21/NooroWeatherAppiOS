@@ -8,12 +8,12 @@
 import SwiftUI
 
 struct WeatherAppHomeView: View {
-    @State private var searchText = ""
+    @StateObject private var viewModel = WeatherAppHomeViewModel()
     
     var body: some View {
         VStack {
             // Search Bar
-            SearchBar(searchText: $searchText)
+            SearchBar(searchText: $viewModel.searchText)
             
             // No City Selected View
             Spacer()

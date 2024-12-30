@@ -10,7 +10,7 @@ import SwiftUI
 struct SelectedCityWeatherView: View {
     
     var body: some View {
-        
+        return EmptyView()
     }
     
 }
