@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  WeatherAppContainerView.swift
 //  NooroWeatherAppiOS
 //
 //  Created by Martin Maly on 2024-12-30.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct WeatherAppContainerView: View {
     var body: some View {
         VStack {
             Image(systemName: "globe")
@@ -20,5 +20,5 @@ struct ContentView: View {
 }
 
 #Preview {
-    ContentView()
+    WeatherAppContainerView()
 }
