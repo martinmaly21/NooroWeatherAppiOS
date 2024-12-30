@@ -15,11 +15,11 @@ struct NoLocationSelectedView: View {
             VStack(spacing: 12) {
                 Text(Strings.NO_CITY_SELECTED)
                     .font(.poppins600(size: 30))
-                    .foregroundColor(.primaryText)
+                    .foregroundStyle(.primaryText)
                 
                 Text(Strings.PLEASE_SEARCH)
                     .font(.poppins600(size: 15))
-                    .foregroundColor(.primaryText)
+                    .foregroundStyle(.primaryText)
             }
             
             Spacer()
