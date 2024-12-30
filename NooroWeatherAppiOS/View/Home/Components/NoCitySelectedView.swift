@@ -10,11 +10,11 @@ import SwiftUI
 struct NoCitySelectedView: View {
     var body: some View {
         VStack(spacing: 12) {
-            Text("No City Selected")
+            Text(Strings.NO_CITY_SELECTED)
                 .font(.title2)
                 .fontWeight(.semibold)
             
-            Text("Please Search For A City")
+            Text(Strings.PLEASE_SEARCH)
                 .font(.subheadline)
                 .foregroundColor(.gray)
         }

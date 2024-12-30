@@ -15,7 +15,7 @@ struct SearchBar: View {
         HStack {
             Image(systemName: "magnifyingglass")
                 .foregroundColor(.gray)
-            TextField("Search Location", text: $searchText)
+            TextField(Strings.SEARCH_BAR_PLACEHOLDER, text: $searchText)
                 .textFieldStyle(PlainTextFieldStyle())
         }
         .padding()
