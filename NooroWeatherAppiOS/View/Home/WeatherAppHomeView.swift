@@ -15,10 +15,9 @@ struct WeatherAppHomeView: View {
             // Search Bar
             SearchBar(searchText: $viewModel.searchText)
             
-            // No City Selected View
             Spacer()
             
-            NoCitySelectedView()
+            NoLocationSelectedView()
             
             Spacer()
         }

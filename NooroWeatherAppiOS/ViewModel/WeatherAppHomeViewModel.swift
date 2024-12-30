@@ -8,6 +8,6 @@
 import SwiftUI
 
 final class WeatherAppHomeViewModel: ObservableObject {
-    @Published var selectedCity: City?
+    @Published var selectedLocation: Location?
     @Published var searchText = ""
 }

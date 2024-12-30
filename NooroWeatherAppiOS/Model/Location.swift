@@ -1,11 +1,11 @@
 //
-//  City.swift
+//  Location.swift
 //  NooroWeatherAppiOS
 //
 //  Created by Martin Maly on 2024-12-30.
 //
 
-struct City {
+struct Location {
     let icon: String
     let name: String
     let temperature: Double

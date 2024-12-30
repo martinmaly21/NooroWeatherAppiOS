@@ -1,5 +1,5 @@
 //
-//  NoCitySelectedView.swift
+//  NoLocationSelectedView.swift
 //  NooroWeatherAppiOS
 //
 //  Created by Martin Maly on 2024-12-30.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct NoCitySelectedView: View {
+struct NoLocationSelectedView: View {
     var body: some View {
         VStack(spacing: 12) {
             Text(Strings.NO_CITY_SELECTED)
