@@ -11,7 +11,7 @@ import SwiftUI
 struct NooroWeatherAppiOSApp: App {
     var body: some Scene {
         WindowGroup {
-            WeatherAppContainerView()
+            WeatherAppHomeView()
         }
     }
 }
