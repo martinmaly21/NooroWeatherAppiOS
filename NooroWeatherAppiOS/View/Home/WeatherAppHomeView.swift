@@ -12,12 +12,13 @@ struct WeatherAppHomeView: View {
     
     var body: some View {
         VStack(spacing: 0) {
-            // Search Bar
             SearchBar(searchText: $viewModel.searchText)
             
-            // Either show search results or main content
             if !viewModel.searchText.isEmpty {
-                searchResultsListView
+                ZStack {
+                    searchResultsListView
+                    searchStatusView
+                }
             } else if let selectedLocation = viewModel.selectedLocation {
                 SelectedLocationView(locationWithWeather: selectedLocation)
             } else {
@@ -37,6 +38,17 @@ struct WeatherAppHomeView: View {
                         }
                 }
             }
+        }
+    }
+    
+    private var searchStatusView: some View {
+        VStack {
+            Spacer()
+            SearchStatusView(
+                isLoading: viewModel.isLoading,
+                error: viewModel.error,
+                noResults: viewModel.searchResults.isEmpty && !viewModel.isLoading
+            )
         }
     }
 }
