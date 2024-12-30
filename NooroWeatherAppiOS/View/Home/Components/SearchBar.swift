@@ -13,14 +13,19 @@ struct SearchBar: View {
     
     var body: some View {
         HStack {
-            Image(systemName: "magnifyingglass")
-                .foregroundColor(.gray)
             TextField(Strings.SEARCH_BAR_PLACEHOLDER, text: $searchText)
+                .font(.poppins400(size: 15))
                 .textFieldStyle(PlainTextFieldStyle())
+            
+            Image("search_24px")
+                .resizable()
+                .frame(width: 17.49, height: 17.49)
+                .foregroundColor(.searchBarSearchIcon)
         }
-        .padding()
-        .background(Color(.systemGray6))
-        .cornerRadius(10)
+        .frame(height: 46)
+        .padding(.horizontal, 24)
+        .background(.searchBarBackground)
+        .cornerRadius(16)
         .padding(.horizontal)
     }
 }

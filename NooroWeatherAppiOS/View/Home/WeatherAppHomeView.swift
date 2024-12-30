@@ -22,6 +22,7 @@ struct WeatherAppHomeView: View {
             
             Spacer()
         }
+        .background(.primaryBackground)
     }
 }
 
