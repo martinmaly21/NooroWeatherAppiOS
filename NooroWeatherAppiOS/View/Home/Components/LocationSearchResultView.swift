@@ -37,7 +37,7 @@ struct LocationSearchResultView: View {
             AsyncImage(url: URL(string: "https:" + locationWithWeather.weather.condition.iconURL)) { image in
                 image
                     .resizable()
-                    .aspectRatio(contentMode: .fit)
+                    .aspectRatio(contentMode: .fill)
                     .frame(width: 83, height: 67)
             } placeholder: {
                 Rectangle()
