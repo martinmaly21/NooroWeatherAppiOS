@@ -1,5 +1,5 @@
 //
-//  SelectedLocationView.swift
+//  LocationSearchResultView.swift
 //  NooroWeatherAppiOS
 //
 //  Created by Martin Maly on 2024-12-30.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct SelectedLocationView: View {
+struct LocationSearchResultView: View {
     
     let locationWithWeather: LocationWithWeather
     
