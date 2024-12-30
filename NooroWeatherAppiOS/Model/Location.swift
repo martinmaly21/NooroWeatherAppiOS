@@ -12,4 +12,8 @@ struct Location: Codable {
     let name: String
     let region: String
     let country: String
+    
+    var id: String {
+        return name + region + country
+    }
 }
