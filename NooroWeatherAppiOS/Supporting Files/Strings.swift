@@ -43,4 +43,16 @@ enum Strings {
         value: "Feels Like",
         comment: "Feels Like title label value"
     )
+    
+    static let SEARCHING = NSLocalizedString(
+        "SEARCHING",
+        value: "Searching...",
+        comment: "Label text that's displayed while searching for locations"
+    )
+    
+    static let NO_LOCATIONS_FOUND = NSLocalizedString(
+        "NO_LOCATIONS_FOUND",
+        value: "No locations found",
+        comment: "Label text that's displayed when a search returns no locations"
+    )
 }
