@@ -9,10 +9,12 @@ import SwiftUI
 
 struct WeatherAppHomeView: View {
     @StateObject private var viewModel = WeatherAppHomeViewModel()
+    @FocusState private var isSearchFocused: Bool
     
     var body: some View {
         VStack(spacing: 0) {
             SearchBar(searchText: $viewModel.searchText)
+                .focused($isSearchFocused)
             
             if !viewModel.searchText.isEmpty {
                 ZStack {
@@ -35,6 +37,7 @@ struct WeatherAppHomeView: View {
                         .onTapGesture {
                             viewModel.selectLocation(result)
                             viewModel.searchText = ""
+                            isSearchFocused = false
                         }
                 }
             }
