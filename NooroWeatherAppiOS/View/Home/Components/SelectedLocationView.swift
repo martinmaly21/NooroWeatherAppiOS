@@ -11,7 +11,7 @@ struct SelectedLocationView: View {
     let locationWithWeather: LocationWithWeather
     
     var body: some View {
-        VStack(alignment: .leading, spacing: 16) {
+        VStack(alignment: .center, spacing: 16) {
             AsyncImage(url: URL(string: "https:" + locationWithWeather.weather.condition.iconURL)) { image in
                 image
                     .resizable()
@@ -55,11 +55,15 @@ struct SelectedLocationView: View {
                     value: "\(Int(round(Double(locationWithWeather.weather.humidity))))%"
                 )
                 
+                Spacer()
+                
                 // UV Index
                 WeatherInfoItem(
                     title: Strings.UV,
                     value: "\(Int(round(locationWithWeather.weather.uv)))"
                 )
+                
+                Spacer()
                 
                 // Feels like
                 WeatherInfoItem(
@@ -67,12 +71,14 @@ struct SelectedLocationView: View {
                     value: "\(Int(round(locationWithWeather.weather.feelslikeC)))°"
                 )
             }
-            .padding()
+            .frame(maxWidth: .infinity, alignment: .center)
+            
+            .padding(.vertical)
+            .padding(.horizontal, 30)
             .background(.locationWeatherDetailsBackground)
             .cornerRadius(16)
         }
         .padding(24)
-        .frame(maxWidth: .infinity, alignment: .center)
         .cornerRadius(24)
     }
 }

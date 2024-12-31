@@ -11,7 +11,7 @@ struct WeatherInfoItem: View {
     let title: String
     let value: String
     var body: some View {
-        VStack(alignment: .leading, spacing: 8) {
+        VStack(alignment: .center, spacing: 8) {
             HStack(spacing: 4) {
                 Text(title)
                     .font(.poppins500(size: 12))
