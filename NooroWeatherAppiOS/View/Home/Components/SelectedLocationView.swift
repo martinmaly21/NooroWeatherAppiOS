@@ -12,7 +12,7 @@ struct SelectedLocationView: View {
     
     var body: some View {
         ScrollView {
-            VStack(alignment: .center, spacing: 16) {
+            VStack(alignment: .center, spacing: 8) {
                 Spacer()
                     .frame(height: 24)
                 
@@ -48,6 +48,7 @@ struct SelectedLocationView: View {
                         .foregroundStyle(.primaryText)
                         .padding(.top, 12)
                 }
+                .padding(.bottom, 8)
                 
                 HStack(spacing: 24) {
                     WeatherInfoItem(
