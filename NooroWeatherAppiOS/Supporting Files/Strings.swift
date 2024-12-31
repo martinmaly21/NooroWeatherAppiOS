@@ -55,4 +55,10 @@ enum Strings {
         value: "No locations found",
         comment: "Label text that's displayed when a search returns no locations"
     )
+    
+    static let NUMBER_OF_RESULTS = NSLocalizedString(
+        "NUMBER_OF_RESULTS",
+        value: "%d locations found",
+        comment: "Label text that's displayed when a search returns some locations"
+    )
 }

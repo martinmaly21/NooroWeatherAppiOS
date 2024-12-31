@@ -49,7 +49,8 @@ struct WeatherAppHomeView: View {
             SearchStatusView(
                 isLoading: viewModel.isLoading,
                 error: viewModel.error,
-                noResults: viewModel.searchResults.isEmpty && !viewModel.isLoading
+                noResults: viewModel.searchResults.isEmpty && !viewModel.isLoading,
+                numberOfResults: viewModel.searchResults.count
             )
         }
     }

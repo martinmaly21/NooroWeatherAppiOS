@@ -11,6 +11,7 @@ struct SearchStatusView: View {
     let isLoading: Bool
     let error: Error?
     let noResults: Bool
+    let numberOfResults: Int
     
     var body: some View {
         VStack {
@@ -27,6 +28,10 @@ struct SearchStatusView: View {
                     .foregroundColor(.secondaryText)
             } else if noResults {
                 Text(Strings.NO_LOCATIONS_FOUND)
+                    .font(.poppins500(size: 15))
+                    .foregroundColor(.secondary)
+            } else {
+                Text(String.localizedStringWithFormat(Strings.NUMBER_OF_RESULTS, numberOfResults))
                     .font(.poppins500(size: 15))
                     .foregroundColor(.secondary)
             }
