@@ -41,6 +41,7 @@ final class WeatherAppHomeViewModel: ObservableObject {
                 return Future { promise in
                     Task {
                         do {
+                            self.error = nil
                             let results = try await self.weatherService.searchLocationsWithWeather(query: searchTerm)
                             promise(.success(results))
                         } catch {
