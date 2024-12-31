@@ -41,6 +41,7 @@ struct WeatherAppHomeView: View {
                 }
             }
         }
+        .safeAreaPadding(.bottom, 44)
     }
     
     private var searchStatusView: some View {
