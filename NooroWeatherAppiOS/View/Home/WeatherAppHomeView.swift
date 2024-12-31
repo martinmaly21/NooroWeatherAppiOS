@@ -36,7 +36,6 @@ struct WeatherAppHomeView: View {
                     LocationSearchResultView(locationWithWeather: result)
                         .onTapGesture {
                             viewModel.selectLocation(result)
-                            viewModel.searchText = ""
                             isSearchFocused = false
                         }
                 }

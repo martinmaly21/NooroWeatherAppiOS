@@ -65,5 +65,9 @@ final class WeatherAppHomeViewModel: ObservableObject {
     // MARK: - Public Methods
     func selectLocation(_ location: LocationWithWeather) {
         selectedLocation = location
+        
+        //reset state
+        searchText = ""
+        searchResults = []
     }
 }
