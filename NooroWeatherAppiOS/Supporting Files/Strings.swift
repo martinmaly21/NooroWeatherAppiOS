@@ -25,4 +25,22 @@ enum Strings {
         value: "Please Search For A City",
         comment: "Subtitle shown when no city is selected"
     )
+    
+    static let HUMIDITY = NSLocalizedString(
+        "HUMIDITY",
+        value: "Humidity",
+        comment: "Hummidity title label value"
+    )
+    
+    static let UV = NSLocalizedString(
+        "UV",
+        value: "UV",
+        comment: "UV title label value"
+    )
+    
+    static let FEELS_LIKE = NSLocalizedString(
+        "FEELS_LIKE",
+        value: "Feels Like",
+        comment: "Feels Like title label value"
+    )
 }
