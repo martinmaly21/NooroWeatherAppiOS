@@ -23,7 +23,7 @@ struct SelectedLocationView: View {
                         .frame(width: 123, height: 123)
                 } placeholder: {
                     Rectangle()
-                        .fill(.gray.opacity(0.45))
+                        .fill(.clear)
                         .frame(width: 123, height: 123)
                 }
                 

@@ -41,7 +41,7 @@ struct LocationSearchResultView: View {
                     .frame(width: 83, height: 67)
             } placeholder: {
                 Rectangle()
-                    .fill(.gray.opacity(0.45))
+                    .fill(.clear)
                     .frame(width: 83, height: 67)
             }
             .padding(.trailing, 20)
