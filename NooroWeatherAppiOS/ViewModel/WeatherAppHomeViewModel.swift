@@ -25,6 +25,21 @@ final class WeatherAppHomeViewModel: ObservableObject {
     init(weatherService: WeatherAPIServicing = WeatherAPIManager()) {
         self.weatherService = weatherService
         setupSearchSubscription()
+        Task {
+            await loadSavedLocation()
+        }
+    }
+    
+    private func loadSavedLocation() async {
+        guard let savedLocation = UserDefaultsManager.loadLocation() else { return }
+        
+        do {
+            // Fetch fresh weather for the saved location
+            let weatherData = try await weatherService.getWeather(for: savedLocation.name)
+            selectedLocation = weatherData
+        } catch {
+            self.error = error
+        }
     }
     
     // MARK: - Private Methods
@@ -66,6 +81,8 @@ final class WeatherAppHomeViewModel: ObservableObject {
     // MARK: - Public Methods
     func selectLocation(_ location: LocationWithWeather) {
         selectedLocation = location
+        // Save the location (not the weather) to UserDefaults
+        UserDefaultsManager.saveLocation(location.location)
         
         //reset state
         searchText = ""

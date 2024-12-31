@@ -21,8 +21,8 @@ protocol WeatherAPIServicing {
 
 /// Manages API requests to the WeatherAPI service
 class WeatherAPIManager: WeatherAPIServicing {
-    private let apiKey: String = Constants.apiKey
-    private let baseURL = Constants.baseURL
+    private let apiKey: String = Constants.API.apiKey
+    private let baseURL = Constants.API.baseURL
    
    func searchLocationsWithWeather(query: String) async throws -> [LocationWithWeather] {
        guard let url = URL(string: "\(baseURL)/search.json?key=\(apiKey)&q=\(query)") else {
